@@ -70,10 +70,49 @@ Jika lupa deklarasi variabel var, const, atau let akan dianggap var
 ## React JS - Basic
 ### Props dan State
 Perbedaan props dan state \
-Props \
+Props 
 1. Read only
 2. Tidak bisa dimodifikasi
 
-State \
+State 
 1. State bisa dimodifikasi, bisa async
 2. Bisa dimodif dengan this.setState atau useEffect
+
+Contoh useEffect:
+```
+    function Movie(props){
+        const [movies, setMovie] = useState([])
+        useEffect(()=>{
+            async function fetchData(){
+                const request = await axios.get(props.url)
+                setMovie(request.data.results)
+            }
+            fetchData()
+        }, [props.url])
+        console.log(movies)
+        return(
+            <div className="App">
+            </div>
+        )
+    }
+```
+
+Contoh this.setState:
+```
+    export default class Content extends Component {
+        constructor(props){
+            super(props)
+            this.state = {
+                makanan : "Bakso"
+            }
+        }
+        render() {
+            return (
+                <div>
+                    <h2>{this.state.makanan}</h2>
+                    <button onClick={()=> this.setState({makanan: "Soto"})}>Change</button>
+                </div>
+            )
+        }
+    }
+```
