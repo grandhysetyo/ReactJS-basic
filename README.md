@@ -6,9 +6,10 @@ var dan let hampir sama \
 const = konstanta
 
 ### Sifat Variabel ES6
-<p align="center">
+<p align="left">
   <img src="https://miro.medium.com/max/1230/1*sUBeBuOB8pAuMPfw9BQmvA.png" width="350" title="Sifat Variabel">  
 </p>
+
 1. Redeclare \
 Contoh: \
 Bisa (output: 3000)
@@ -66,3 +67,13 @@ Jika lupa deklarasi variabel var, const, atau let akan dianggap var
     }
    console.log(a) => 6
 ```
+## React JS - Basic
+### Props dan State
+Perbedaan props dan state \
+Props \
+1. Read only
+2. Tidak bisa dimodifikasi
+
+State \
+1. State bisa dimodifikasi, bisa async
+2. Bisa dimodif dengan this.setState atau useEffect
