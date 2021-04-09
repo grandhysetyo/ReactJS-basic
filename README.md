@@ -67,6 +67,77 @@ Jika lupa deklarasi variabel var, const, atau let akan dianggap var
     }
    console.log(a) => 6
 ```
+
+### Map, Filter dan Reduce
+Map: \
+cara lama:
+```
+var task_names = [];
+ 
+tasks.forEach(function (task) {
+ 
+    task_names.push(task.name);
+     
+});
+```
+menggunakan Map:
+```
+var task_names = tasks.map(function (task, index, array) {
+    return task.name; 
+});
+```
+ES6:
+```
+var task_names = tasks.map((task) => task.name );
+```
+
+Filter: \
+cara lama:
+```
+var difficult_tasks = [];
+ 
+tasks.forEach(function (task) {
+    if (task.duration >= 120) {
+        difficult_tasks.push(task);
+    }
+});
+```
+menggunakan Filter:
+```
+var difficult_tasks = tasks.filter(function (task) {
+    return task.duration >= 120;
+});
+```
+ES6:
+```
+var difficult_tasks = tasks.filter((task) => task.duration >= 120 );
+```
+
+Reduce: \
+cara lama:
+```
+var numbers = [1, 2, 3, 4, 5],
+    total = 0;
+     
+numbers.forEach(function (number) {
+    total += number;
+});
+```
+menggunakan reduce:
+
+```
+var numbers = [1, 2, 3, 4, 5],
+    total = 0;
+var total = numbers.reduce(function (previous, current) {
+    return previous + current;
+}, 0);
+```
+ES6:
+```
+var total_time = tasks.reduce((previous, current) => previous + current );
+```
+
+
 ## React JS - Basic
 ### Props dan State
 Perbedaan props dan state \
