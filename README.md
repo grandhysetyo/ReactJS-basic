@@ -187,3 +187,7 @@ Contoh this.setState:
         }
     }
 ```
+### Lifecycle React JS
+<p align="left">
+  <img src="https://miro.medium.com/max/4516/1*552z6hbX_b648DjpTLHZNg.png" width="350" title="React JS Lifecycle">  
+</p>
